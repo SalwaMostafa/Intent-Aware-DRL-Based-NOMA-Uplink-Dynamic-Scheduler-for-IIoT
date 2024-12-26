@@ -1,0 +1,868 @@
+NOTE: This module uses Singularity. Some commands execute inside the container
+(e.g. python3, pip3).
+
+Defaulting to user installation because normal site-packages is not writeable
+Collecting gym
+  Downloading gym-0.26.2.tar.gz (721 kB)
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+    Preparing wheel metadata: started
+    Preparing wheel metadata: finished with status 'done'
+Requirement already satisfied: importlib-metadata>=4.8.0; python_version < "3.10" in /users/smostafa/.local/lib/python3.9/site-packages (from gym) (7.0.0)
+Requirement already satisfied: numpy>=1.18.0 in /usr/local/lib64/python3.9/site-packages (from gym) (1.22.4)
+Requirement already satisfied: cloudpickle>=1.2.0 in /usr/local/lib/python3.9/site-packages (from gym) (2.1.0)
+Collecting gym-notices>=0.0.4
+  Downloading gym_notices-0.0.8-py3-none-any.whl (3.0 kB)
+Requirement already satisfied: zipp>=0.5 in /usr/local/lib/python3.9/site-packages (from importlib-metadata>=4.8.0; python_version < "3.10"->gym) (3.8.0)
+Building wheels for collected packages: gym
+  Building wheel for gym (PEP 517): started
+  Building wheel for gym (PEP 517): finished with status 'done'
+  Created wheel for gym: filename=gym-0.26.2-py3-none-any.whl size=827618 sha256=86baa5dd0e431e0e305f91ee611b362c48e1868dfcc1d0edc48a3ecf7e4bedbe
+  Stored in directory: /users/smostafa/.cache/pip/wheels/af/2b/30/5e78b8b9599f2a2286a582b8da80594f654bf0e18d825a4405
+Successfully built gym
+Installing collected packages: gym-notices, gym
+Successfully installed gym-0.26.2 gym-notices-0.0.8
+Defaulting to user installation because normal site-packages is not writeable
+Collecting numpy-stl
+  Downloading numpy_stl-3.1.2-py3-none-any.whl (20 kB)
+Requirement already satisfied: numpy in /usr/local/lib64/python3.9/site-packages (from numpy-stl) (1.22.4)
+Collecting python-utils>=3.4.5
+  Downloading python_utils-3.9.0-py2.py3-none-any.whl (32 kB)
+Requirement already satisfied: typing-extensions>3.10.0.2 in /users/smostafa/.local/lib/python3.9/site-packages (from python-utils>=3.4.5->numpy-stl) (4.12.2)
+Installing collected packages: python-utils, numpy-stl
+  WARNING: The scripts stl, stl2ascii and stl2bin are installed in '/users/smostafa/.local/bin' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+Successfully installed numpy-stl-3.1.2 python-utils-3.9.0
+Defaulting to user installation because normal site-packages is not writeable
+Requirement already satisfied: torch in /usr/local/lib64/python3.9/site-packages (1.12.0+cu116)
+Requirement already satisfied: typing-extensions in /users/smostafa/.local/lib/python3.9/site-packages (from torch) (4.12.2)
+Defaulting to user installation because normal site-packages is not writeable
+Requirement already satisfied: tqdm in /usr/local/lib/python3.9/site-packages (4.64.0)
+Defaulting to user installation because normal site-packages is not writeable
+Requirement already satisfied: tensorboard in /usr/local/lib/python3.9/site-packages (2.9.1)
+Requirement already satisfied: requests<3,>=2.21.0 in /usr/local/lib/python3.9/site-packages (from tensorboard) (2.28.1)
+Requirement already satisfied: tensorboard-plugin-wit>=1.6.0 in /usr/local/lib/python3.9/site-packages (from tensorboard) (1.8.1)
+Collecting protobuf<3.20,>=3.9.2
+  Downloading protobuf-3.19.6-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.1 MB)
+Requirement already satisfied: werkzeug>=1.0.1 in /usr/local/lib/python3.9/site-packages (from tensorboard) (2.1.2)
+Requirement already satisfied: markdown>=2.6.8 in /usr/local/lib/python3.9/site-packages (from tensorboard) (3.3.7)
+Requirement already satisfied: google-auth<3,>=1.6.3 in /usr/local/lib/python3.9/site-packages (from tensorboard) (2.9.0)
+Requirement already satisfied: google-auth-oauthlib<0.5,>=0.4.1 in /usr/local/lib/python3.9/site-packages (from tensorboard) (0.4.6)
+Requirement already satisfied: tensorboard-data-server<0.7.0,>=0.6.0 in /usr/local/lib/python3.9/site-packages (from tensorboard) (0.6.1)
+Requirement already satisfied: numpy>=1.12.0 in /usr/local/lib64/python3.9/site-packages (from tensorboard) (1.22.4)
+Requirement already satisfied: absl-py>=0.4 in /usr/local/lib/python3.9/site-packages (from tensorboard) (1.1.0)
+Requirement already satisfied: wheel>=0.26 in /usr/local/lib/python3.9/site-packages (from tensorboard) (0.37.1)
+Requirement already satisfied: setuptools>=41.0.0 in /usr/lib/python3.9/site-packages (from tensorboard) (50.3.2)
+Requirement already satisfied: grpcio>=1.24.3 in /users/smostafa/.local/lib/python3.9/site-packages (from tensorboard) (1.62.1)
+Requirement already satisfied: urllib3<1.27,>=1.21.1 in /usr/local/lib/python3.9/site-packages (from requests<3,>=2.21.0->tensorboard) (1.26.9)
+Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.9/site-packages (from requests<3,>=2.21.0->tensorboard) (3.3)
+Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.9/site-packages (from requests<3,>=2.21.0->tensorboard) (2022.6.15)
+Requirement already satisfied: charset-normalizer<3,>=2 in /usr/local/lib/python3.9/site-packages (from requests<3,>=2.21.0->tensorboard) (2.1.0)
+Requirement already satisfied: importlib-metadata>=4.4; python_version < "3.10" in /users/smostafa/.local/lib/python3.9/site-packages (from markdown>=2.6.8->tensorboard) (7.0.0)
+Requirement already satisfied: cachetools<6.0,>=2.0.0 in /usr/local/lib/python3.9/site-packages (from google-auth<3,>=1.6.3->tensorboard) (5.2.0)
+Requirement already satisfied: rsa<5,>=3.1.4; python_version >= "3.6" in /usr/local/lib/python3.9/site-packages (from google-auth<3,>=1.6.3->tensorboard) (4.8)
+Requirement already satisfied: six>=1.9.0 in /usr/local/lib/python3.9/site-packages (from google-auth<3,>=1.6.3->tensorboard) (1.16.0)
+Requirement already satisfied: pyasn1-modules>=0.2.1 in /usr/local/lib/python3.9/site-packages (from google-auth<3,>=1.6.3->tensorboard) (0.2.8)
+Requirement already satisfied: requests-oauthlib>=0.7.0 in /users/smostafa/.local/lib/python3.9/site-packages (from google-auth-oauthlib<0.5,>=0.4.1->tensorboard) (2.0.0)
+Requirement already satisfied: zipp>=0.5 in /usr/local/lib/python3.9/site-packages (from importlib-metadata>=4.4; python_version < "3.10"->markdown>=2.6.8->tensorboard) (3.8.0)
+Requirement already satisfied: pyasn1>=0.1.3 in /usr/local/lib/python3.9/site-packages (from rsa<5,>=3.1.4; python_version >= "3.6"->google-auth<3,>=1.6.3->tensorboard) (0.4.8)
+Requirement already satisfied: oauthlib>=3.0.0 in /users/smostafa/.local/lib/python3.9/site-packages (from requests-oauthlib>=0.7.0->google-auth-oauthlib<0.5,>=0.4.1->tensorboard) (3.2.2)
+Installing collected packages: protobuf
+  Attempting uninstall: protobuf
+    Found existing installation: protobuf 4.25.3
+    Uninstalling protobuf-4.25.3:
+      Successfully uninstalled protobuf-4.25.3
+ERROR: After October 2020 you may experience errors when installing or updating packages. This is because pip will change the way that it resolves dependency conflicts.
+
+We recommend you use --use-feature=2020-resolver to test your packages with the new resolver before it becomes the default.
+
+opentelemetry-exporter-otlp-proto-grpc 1.24.0 requires googleapis-common-protos~=1.52, which is not installed.
+onnxruntime 1.17.1 requires sympy, which is not installed.
+chromadb 0.4.24 requires fastapi>=0.95.2, which is not installed.
+chromadb 0.4.24 requires importlib-resources, which is not installed.
+chromadb 0.4.24 requires overrides>=7.3.1, which is not installed.
+chromadb 0.4.24 requires tenacity>=8.2.3, which is not installed.
+chromadb 0.4.24 requires uvicorn[standard]>=0.18.3, which is not installed.
+onnx 1.16.1 requires protobuf>=3.20.2, but you'll have protobuf 3.19.6 which is incompatible.
+grpcio-tools 1.62.1 requires protobuf<5.0dev,>=4.21.6, but you'll have protobuf 3.19.6 which is incompatible.
+grpcio-health-checking 1.62.1 requires protobuf>=4.21.6, but you'll have protobuf 3.19.6 which is incompatible.
+fastembed 0.2.7 requires huggingface-hub<0.21,>=0.20, but you'll have huggingface-hub 0.24.0 which is incompatible.
+fastembed 0.2.7 requires requests<3.0,>=2.31, but you'll have requests 2.28.1 which is incompatible.
+fastembed 0.2.7 requires tokenizers<0.16,>=0.15, but you'll have tokenizers 0.19.1 which is incompatible.
+fastembed 0.2.7 requires tqdm<5.0,>=4.66, but you'll have tqdm 4.64.0 which is incompatible.
+chromadb 0.4.24 requires numpy>=1.22.5, but you'll have numpy 1.22.4 which is incompatible.
+chromadb 0.4.24 requires tqdm>=4.65.0, but you'll have tqdm 4.64.0 which is incompatible.
+ray 1.13.0 requires click<=8.0.4,>=7.0, but you'll have click 8.1.3 which is incompatible.
+ray 1.13.0 requires grpcio<=1.43.0,>=1.28.1, but you'll have grpcio 1.62.1 which is incompatible.
+Successfully installed protobuf-3.19.6
+Defaulting to user installation because normal site-packages is not writeable
+Collecting SciencePlots
+  Downloading SciencePlots-2.1.1-py3-none-any.whl (16 kB)
+Requirement already satisfied: matplotlib in /usr/local/lib64/python3.9/site-packages (from SciencePlots) (3.5.2)
+Requirement already satisfied: pyparsing>=2.2.1 in /usr/local/lib/python3.9/site-packages (from matplotlib->SciencePlots) (3.0.9)
+Requirement already satisfied: cycler>=0.10 in /usr/local/lib/python3.9/site-packages (from matplotlib->SciencePlots) (0.11.0)
+Requirement already satisfied: python-dateutil>=2.7 in /usr/local/lib/python3.9/site-packages (from matplotlib->SciencePlots) (2.8.2)
+Requirement already satisfied: numpy>=1.17 in /usr/local/lib64/python3.9/site-packages (from matplotlib->SciencePlots) (1.22.4)
+Requirement already satisfied: pillow>=6.2.0 in /usr/local/lib64/python3.9/site-packages (from matplotlib->SciencePlots) (9.1.1)
+Requirement already satisfied: fonttools>=4.22.0 in /usr/local/lib/python3.9/site-packages (from matplotlib->SciencePlots) (4.33.3)
+Requirement already satisfied: packaging>=20.0 in /usr/local/lib/python3.9/site-packages (from matplotlib->SciencePlots) (21.3)
+Requirement already satisfied: kiwisolver>=1.0.1 in /usr/local/lib64/python3.9/site-packages (from matplotlib->SciencePlots) (1.4.3)
+Requirement already satisfied: six>=1.5 in /usr/local/lib/python3.9/site-packages (from python-dateutil>=2.7->matplotlib->SciencePlots) (1.16.0)
+Installing collected packages: SciencePlots
+Successfully installed SciencePlots-2.1.1
+/scratch/project_2006609/Journal_[12_03_2024_30]/MAPPO_Run_Train_Test_2Seeds.py:761: DeprecationWarning: `np.int` is a deprecated alias for the builtin `int`. To silence this warning, use `int` by itself. Doing this will not modify any behavior and is safe. When replacing `np.int`, you may wish to use e.g. `np.int64` or `np.int32` to specify the precision. If you wish to review your current use, check the release note link for additional information.
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  n_eval = np.int(n_episodes/n_feval_episodes)
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 8 concurrent workers.
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:555: UserWarning: [33mWARN: The environment MECSCH-v1 is out of date. You should consider upgrading to version `v6`.[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:555: UserWarning: [33mWARN: The environment MECSCH-v1 is out of date. You should consider upgrading to version `v6`.[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:555: UserWarning: [33mWARN: The environment MECSCH-v1 is out of date. You should consider upgrading to version `v6`.[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:555: UserWarning: [33mWARN: The environment MECSCH-v1 is out of date. You should consider upgrading to version `v6`.[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:555: UserWarning: [33mWARN: The environment MECSCH-v1 is out of date. You should consider upgrading to version `v6`.[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:555: UserWarning: [33mWARN: The environment MECSCH-v1 is out of date. You should consider upgrading to version `v6`.[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:555: UserWarning: [33mWARN: The environment MECSCH-v1 is out of date. You should consider upgrading to version `v6`.[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:555: UserWarning: [33mWARN: The environment MECSCH-v1 is out of date. You should consider upgrading to version `v6`.[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:174: UserWarning: [33mWARN: Future gym versions will require that `Env.reset` can be passed a `seed` instead of using `Env.seed` for resetting the environment random number generator.[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:174: UserWarning: [33mWARN: Future gym versions will require that `Env.reset` can be passed a `seed` instead of using `Env.seed` for resetting the environment random number generator.[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:174: UserWarning: [33mWARN: Future gym versions will require that `Env.reset` can be passed a `seed` instead of using `Env.seed` for resetting the environment random number generator.[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:174: UserWarning: [33mWARN: Future gym versions will require that `Env.reset` can be passed a `seed` instead of using `Env.seed` for resetting the environment random number generator.[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:174: UserWarning: [33mWARN: Future gym versions will require that `Env.reset` can be passed a `seed` instead of using `Env.seed` for resetting the environment random number generator.[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:174: UserWarning: [33mWARN: Future gym versions will require that `Env.reset` can be passed a `seed` instead of using `Env.seed` for resetting the environment random number generator.[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:174: UserWarning: [33mWARN: Future gym versions will require that `Env.reset` can be passed a `seed` instead of using `Env.seed` for resetting the environment random number generator.[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:187: UserWarning: [33mWARN: Future gym versions will require that `Env.reset` can be passed `options` to allow the environment initialisation to be passed additional information.[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:187: UserWarning: [33mWARN: Future gym versions will require that `Env.reset` can be passed `options` to allow the environment initialisation to be passed additional information.[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:187: UserWarning: [33mWARN: Future gym versions will require that `Env.reset` can be passed `options` to allow the environment initialisation to be passed additional information.[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:187: UserWarning: [33mWARN: Future gym versions will require that `Env.reset` can be passed `options` to allow the environment initialisation to be passed additional information.[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:187: UserWarning: [33mWARN: Future gym versions will require that `Env.reset` can be passed `options` to allow the environment initialisation to be passed additional information.[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:187: UserWarning: [33mWARN: Future gym versions will require that `Env.reset` can be passed `options` to allow the environment initialisation to be passed additional information.[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:187: UserWarning: [33mWARN: Future gym versions will require that `Env.reset` can be passed `options` to allow the environment initialisation to be passed additional information.[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:174: UserWarning: [33mWARN: Future gym versions will require that `Env.reset` can be passed a `seed` instead of using `Env.seed` for resetting the environment random number generator.[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:187: UserWarning: [33mWARN: Future gym versions will require that `Env.reset` can be passed `options` to allow the environment initialisation to be passed additional information.[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:195: UserWarning: [33mWARN: The result returned by `env.reset()` was not a tuple of the form `(obs, info)`, where `obs` is a observation and `info` is a dictionary containing additional information. Actual type: `<class 'list'>`[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:195: UserWarning: [33mWARN: The result returned by `env.reset()` was not a tuple of the form `(obs, info)`, where `obs` is a observation and `info` is a dictionary containing additional information. Actual type: `<class 'list'>`[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:195: UserWarning: [33mWARN: The result returned by `env.reset()` was not a tuple of the form `(obs, info)`, where `obs` is a observation and `info` is a dictionary containing additional information. Actual type: `<class 'list'>`[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:195: UserWarning: [33mWARN: The result returned by `env.reset()` was not a tuple of the form `(obs, info)`, where `obs` is a observation and `info` is a dictionary containing additional information. Actual type: `<class 'list'>`[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:195: UserWarning: [33mWARN: The result returned by `env.reset()` was not a tuple of the form `(obs, info)`, where `obs` is a observation and `info` is a dictionary containing additional information. Actual type: `<class 'list'>`[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:195: UserWarning: [33mWARN: The result returned by `env.reset()` was not a tuple of the form `(obs, info)`, where `obs` is a observation and `info` is a dictionary containing additional information. Actual type: `<class 'list'>`[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:195: UserWarning: [33mWARN: The result returned by `env.reset()` was not a tuple of the form `(obs, info)`, where `obs` is a observation and `info` is a dictionary containing additional information. Actual type: `<class 'list'>`[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:195: UserWarning: [33mWARN: The result returned by `env.reset()` was not a tuple of the form `(obs, info)`, where `obs` is a observation and `info` is a dictionary containing additional information. Actual type: `<class 'list'>`[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:219: DeprecationWarning: [33mWARN: Core environment is written in old step API which returns one bool instead of two. It is recommended to rewrite the environment with new step API. [0m
+  logger.deprecation(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:219: DeprecationWarning: [33mWARN: Core environment is written in old step API which returns one bool instead of two. It is recommended to rewrite the environment with new step API. [0m
+  logger.deprecation(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:219: DeprecationWarning: [33mWARN: Core environment is written in old step API which returns one bool instead of two. It is recommended to rewrite the environment with new step API. [0m
+  logger.deprecation(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:219: DeprecationWarning: [33mWARN: Core environment is written in old step API which returns one bool instead of two. It is recommended to rewrite the environment with new step API. [0m
+  logger.deprecation(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:219: DeprecationWarning: [33mWARN: Core environment is written in old step API which returns one bool instead of two. It is recommended to rewrite the environment with new step API. [0m
+  logger.deprecation(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:219: DeprecationWarning: [33mWARN: Core environment is written in old step API which returns one bool instead of two. It is recommended to rewrite the environment with new step API. [0m
+  logger.deprecation(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:219: DeprecationWarning: [33mWARN: Core environment is written in old step API which returns one bool instead of two. It is recommended to rewrite the environment with new step API. [0m
+  logger.deprecation(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:226: UserWarning: [33mWARN: Expects `done` signal to be a boolean, actual type: <class 'list'>[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:226: UserWarning: [33mWARN: Expects `done` signal to be a boolean, actual type: <class 'list'>[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:226: UserWarning: [33mWARN: Expects `done` signal to be a boolean, actual type: <class 'list'>[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:226: UserWarning: [33mWARN: Expects `done` signal to be a boolean, actual type: <class 'list'>[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:226: UserWarning: [33mWARN: Expects `done` signal to be a boolean, actual type: <class 'list'>[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:226: UserWarning: [33mWARN: Expects `done` signal to be a boolean, actual type: <class 'list'>[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:226: UserWarning: [33mWARN: Expects `done` signal to be a boolean, actual type: <class 'list'>[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:149: UserWarning: [33mWARN: The obs returned by the `step()` method was expecting a tuple, actual type: <class 'list'>[0m
+  logger.warn(f"{pre} was expecting a tuple, actual type: {type(obs)}")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:149: UserWarning: [33mWARN: The obs returned by the `step()` method was expecting a tuple, actual type: <class 'list'>[0m
+  logger.warn(f"{pre} was expecting a tuple, actual type: {type(obs)}")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:149: UserWarning: [33mWARN: The obs returned by the `step()` method was expecting a tuple, actual type: <class 'list'>[0m
+  logger.warn(f"{pre} was expecting a tuple, actual type: {type(obs)}")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:149: UserWarning: [33mWARN: The obs returned by the `step()` method was expecting a tuple, actual type: <class 'list'>[0m
+  logger.warn(f"{pre} was expecting a tuple, actual type: {type(obs)}")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:149: UserWarning: [33mWARN: The obs returned by the `step()` method was expecting a tuple, actual type: <class 'list'>[0m
+  logger.warn(f"{pre} was expecting a tuple, actual type: {type(obs)}")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:149: UserWarning: [33mWARN: The obs returned by the `step()` method was expecting a tuple, actual type: <class 'list'>[0m
+  logger.warn(f"{pre} was expecting a tuple, actual type: {type(obs)}")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:149: UserWarning: [33mWARN: The obs returned by the `step()` method was expecting a tuple, actual type: <class 'list'>[0m
+  logger.warn(f"{pre} was expecting a tuple, actual type: {type(obs)}")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:252: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:252: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:252: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:252: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:252: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:252: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:252: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:219: DeprecationWarning: [33mWARN: Core environment is written in old step API which returns one bool instead of two. It is recommended to rewrite the environment with new step API. [0m
+  logger.deprecation(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:226: UserWarning: [33mWARN: Expects `done` signal to be a boolean, actual type: <class 'list'>[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:149: UserWarning: [33mWARN: The obs returned by the `step()` method was expecting a tuple, actual type: <class 'list'>[0m
+  logger.warn(f"{pre} was expecting a tuple, actual type: {type(obs)}")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:252: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/scratch/project_2006609/Journal_[12_03_2024_30]/models.py:380: UserWarning: The use of `x.T` on tensors of dimension other than 2 to reverse their shape is deprecated and it will throw an error in a future release. Consider `x.mT` to transpose batches of matricesor `x.permute(*torch.arange(x.ndim - 1, -1, -1))` to reverse the dimensions of a tensor. (Triggered internally at  ../aten/src/ATen/native/TensorShape.cpp:2981.)
+  log_prob = (torch.stack([dist.log_prob(ac) for dist, ac in zip(dists, action.T)]).sum(0).unsqueeze(-1))
+/scratch/project_2006609/Journal_[12_03_2024_30]/models.py:380: UserWarning: The use of `x.T` on tensors of dimension other than 2 to reverse their shape is deprecated and it will throw an error in a future release. Consider `x.mT` to transpose batches of matricesor `x.permute(*torch.arange(x.ndim - 1, -1, -1))` to reverse the dimensions of a tensor. (Triggered internally at  ../aten/src/ATen/native/TensorShape.cpp:2981.)
+  log_prob = (torch.stack([dist.log_prob(ac) for dist, ac in zip(dists, action.T)]).sum(0).unsqueeze(-1))
+/scratch/project_2006609/Journal_[12_03_2024_30]/models.py:380: UserWarning: The use of `x.T` on tensors of dimension other than 2 to reverse their shape is deprecated and it will throw an error in a future release. Consider `x.mT` to transpose batches of matricesor `x.permute(*torch.arange(x.ndim - 1, -1, -1))` to reverse the dimensions of a tensor. (Triggered internally at  ../aten/src/ATen/native/TensorShape.cpp:2981.)
+  log_prob = (torch.stack([dist.log_prob(ac) for dist, ac in zip(dists, action.T)]).sum(0).unsqueeze(-1))
+/scratch/project_2006609/Journal_[12_03_2024_30]/models.py:380: UserWarning: The use of `x.T` on tensors of dimension other than 2 to reverse their shape is deprecated and it will throw an error in a future release. Consider `x.mT` to transpose batches of matricesor `x.permute(*torch.arange(x.ndim - 1, -1, -1))` to reverse the dimensions of a tensor. (Triggered internally at  ../aten/src/ATen/native/TensorShape.cpp:2981.)
+  log_prob = (torch.stack([dist.log_prob(ac) for dist, ac in zip(dists, action.T)]).sum(0).unsqueeze(-1))
+/scratch/project_2006609/Journal_[12_03_2024_30]/models.py:380: UserWarning: The use of `x.T` on tensors of dimension other than 2 to reverse their shape is deprecated and it will throw an error in a future release. Consider `x.mT` to transpose batches of matricesor `x.permute(*torch.arange(x.ndim - 1, -1, -1))` to reverse the dimensions of a tensor. (Triggered internally at  ../aten/src/ATen/native/TensorShape.cpp:2981.)
+  log_prob = (torch.stack([dist.log_prob(ac) for dist, ac in zip(dists, action.T)]).sum(0).unsqueeze(-1))
+/scratch/project_2006609/Journal_[12_03_2024_30]/models.py:380: UserWarning: The use of `x.T` on tensors of dimension other than 2 to reverse their shape is deprecated and it will throw an error in a future release. Consider `x.mT` to transpose batches of matricesor `x.permute(*torch.arange(x.ndim - 1, -1, -1))` to reverse the dimensions of a tensor. (Triggered internally at  ../aten/src/ATen/native/TensorShape.cpp:2981.)
+  log_prob = (torch.stack([dist.log_prob(ac) for dist, ac in zip(dists, action.T)]).sum(0).unsqueeze(-1))
+/scratch/project_2006609/Journal_[12_03_2024_30]/models.py:380: UserWarning: The use of `x.T` on tensors of dimension other than 2 to reverse their shape is deprecated and it will throw an error in a future release. Consider `x.mT` to transpose batches of matricesor `x.permute(*torch.arange(x.ndim - 1, -1, -1))` to reverse the dimensions of a tensor. (Triggered internally at  ../aten/src/ATen/native/TensorShape.cpp:2981.)
+  log_prob = (torch.stack([dist.log_prob(ac) for dist, ac in zip(dists, action.T)]).sum(0).unsqueeze(-1))
+/scratch/project_2006609/Journal_[12_03_2024_30]/models.py:380: UserWarning: The use of `x.T` on tensors of dimension other than 2 to reverse their shape is deprecated and it will throw an error in a future release. Consider `x.mT` to transpose batches of matricesor `x.permute(*torch.arange(x.ndim - 1, -1, -1))` to reverse the dimensions of a tensor. (Triggered internally at  ../aten/src/ATen/native/TensorShape.cpp:2981.)
+  log_prob = (torch.stack([dist.log_prob(ac) for dist, ac in zip(dists, action.T)]).sum(0).unsqueeze(-1))
+[Parallel(n_jobs=-1)]: Done   2 out of   8 | elapsed: 95.9min remaining: 287.8min
+[Parallel(n_jobs=-1)]: Done   3 out of   8 | elapsed: 96.0min remaining: 159.9min
+[Parallel(n_jobs=-1)]: Done   4 out of   8 | elapsed: 96.0min remaining: 96.0min
+[Parallel(n_jobs=-1)]: Done   5 out of   8 | elapsed: 96.0min remaining: 57.6min
+[Parallel(n_jobs=-1)]: Done   6 out of   8 | elapsed: 96.0min remaining: 32.0min
+[Parallel(n_jobs=-1)]: Done   8 out of   8 | elapsed: 96.0min remaining:    0.0s
+[Parallel(n_jobs=-1)]: Done   8 out of   8 | elapsed: 96.0min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 8 concurrent workers.
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v1 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v2 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v3 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v4 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v5 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v6 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:555: UserWarning: [33mWARN: The environment MECSCH-v2 is out of date. You should consider upgrading to version `v6`.[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v1 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v2 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v3 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v4 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v5 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v6 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:555: UserWarning: [33mWARN: The environment MECSCH-v2 is out of date. You should consider upgrading to version `v6`.[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v1 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v2 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v3 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v4 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v5 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v6 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:555: UserWarning: [33mWARN: The environment MECSCH-v2 is out of date. You should consider upgrading to version `v6`.[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v1 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v2 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v3 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v4 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v5 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v6 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:555: UserWarning: [33mWARN: The environment MECSCH-v2 is out of date. You should consider upgrading to version `v6`.[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v1 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v2 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v3 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v4 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v5 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v6 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:555: UserWarning: [33mWARN: The environment MECSCH-v2 is out of date. You should consider upgrading to version `v6`.[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v1 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v2 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v3 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v4 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v5 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v6 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:555: UserWarning: [33mWARN: The environment MECSCH-v2 is out of date. You should consider upgrading to version `v6`.[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v1 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v2 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v3 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v4 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v5 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v6 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:555: UserWarning: [33mWARN: The environment MECSCH-v2 is out of date. You should consider upgrading to version `v6`.[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v1 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v2 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v3 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v4 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v5 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v6 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:555: UserWarning: [33mWARN: The environment MECSCH-v2 is out of date. You should consider upgrading to version `v6`.[0m
+  logger.warn(
+/scratch/project_2006609/Journal_[12_03_2024_30]/envs/mecsch_v2.py:548: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  return np.array(action)
+/scratch/project_2006609/Journal_[12_03_2024_30]/envs/mecsch_v2.py:548: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  return np.array(action)
+/scratch/project_2006609/Journal_[12_03_2024_30]/envs/mecsch_v2.py:548: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  return np.array(action)
+/scratch/project_2006609/Journal_[12_03_2024_30]/envs/mecsch_v2.py:548: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  return np.array(action)
+/scratch/project_2006609/Journal_[12_03_2024_30]/envs/mecsch_v2.py:548: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  return np.array(action)
+/scratch/project_2006609/Journal_[12_03_2024_30]/envs/mecsch_v2.py:548: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  return np.array(action)
+/scratch/project_2006609/Journal_[12_03_2024_30]/envs/mecsch_v2.py:548: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  return np.array(action)
+/scratch/project_2006609/Journal_[12_03_2024_30]/envs/mecsch_v2.py:548: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  return np.array(action)
+[Parallel(n_jobs=-1)]: Done   2 out of   8 | elapsed: 96.1min remaining: 288.3min
+[Parallel(n_jobs=-1)]: Done   3 out of   8 | elapsed: 96.1min remaining: 160.2min
+[Parallel(n_jobs=-1)]: Done   4 out of   8 | elapsed: 96.1min remaining: 96.1min
+[Parallel(n_jobs=-1)]: Done   5 out of   8 | elapsed: 96.1min remaining: 57.7min
+[Parallel(n_jobs=-1)]: Done   6 out of   8 | elapsed: 96.1min remaining: 32.0min
+[Parallel(n_jobs=-1)]: Done   8 out of   8 | elapsed: 96.1min remaining:    0.0s
+[Parallel(n_jobs=-1)]: Done   8 out of   8 | elapsed: 96.1min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 8 concurrent workers.
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:555: UserWarning: [33mWARN: The environment MECSCH-v5 is out of date. You should consider upgrading to version `v6`.[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:555: UserWarning: [33mWARN: The environment MECSCH-v5 is out of date. You should consider upgrading to version `v6`.[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:555: UserWarning: [33mWARN: The environment MECSCH-v5 is out of date. You should consider upgrading to version `v6`.[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:555: UserWarning: [33mWARN: The environment MECSCH-v5 is out of date. You should consider upgrading to version `v6`.[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:555: UserWarning: [33mWARN: The environment MECSCH-v5 is out of date. You should consider upgrading to version `v6`.[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:555: UserWarning: [33mWARN: The environment MECSCH-v5 is out of date. You should consider upgrading to version `v6`.[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:555: UserWarning: [33mWARN: The environment MECSCH-v5 is out of date. You should consider upgrading to version `v6`.[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:555: UserWarning: [33mWARN: The environment MECSCH-v5 is out of date. You should consider upgrading to version `v6`.[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:137: UserWarning: [33mWARN: The obs returned by the `step()` method was expecting a numpy array, actual type: <class 'list'>[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:137: UserWarning: [33mWARN: The obs returned by the `step()` method was expecting a numpy array, actual type: <class 'list'>[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:137: UserWarning: [33mWARN: The obs returned by the `step()` method was expecting a numpy array, actual type: <class 'list'>[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:137: UserWarning: [33mWARN: The obs returned by the `step()` method was expecting a numpy array, actual type: <class 'list'>[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:137: UserWarning: [33mWARN: The obs returned by the `step()` method was expecting a numpy array, actual type: <class 'list'>[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:137: UserWarning: [33mWARN: The obs returned by the `step()` method was expecting a numpy array, actual type: <class 'list'>[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:137: UserWarning: [33mWARN: The obs returned by the `step()` method was expecting a numpy array, actual type: <class 'list'>[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:137: UserWarning: [33mWARN: The obs returned by the `step()` method was expecting a numpy array, actual type: <class 'list'>[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/spaces/box.py:227: UserWarning: [33mWARN: Casting input x to numpy array.[0m
+  logger.warn("Casting input x to numpy array.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/spaces/box.py:227: UserWarning: [33mWARN: Casting input x to numpy array.[0m
+  logger.warn("Casting input x to numpy array.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/spaces/box.py:227: UserWarning: [33mWARN: Casting input x to numpy array.[0m
+  logger.warn("Casting input x to numpy array.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/spaces/box.py:227: UserWarning: [33mWARN: Casting input x to numpy array.[0m
+  logger.warn("Casting input x to numpy array.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/spaces/box.py:227: UserWarning: [33mWARN: Casting input x to numpy array.[0m
+  logger.warn("Casting input x to numpy array.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/spaces/box.py:227: UserWarning: [33mWARN: Casting input x to numpy array.[0m
+  logger.warn("Casting input x to numpy array.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/spaces/box.py:227: UserWarning: [33mWARN: Casting input x to numpy array.[0m
+  logger.warn("Casting input x to numpy array.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:165: UserWarning: [33mWARN: The obs returned by the `step()` method is not within the observation space.[0m
+  logger.warn(f"{pre} is not within the observation space.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:165: UserWarning: [33mWARN: The obs returned by the `step()` method is not within the observation space.[0m
+  logger.warn(f"{pre} is not within the observation space.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:165: UserWarning: [33mWARN: The obs returned by the `step()` method is not within the observation space.[0m
+  logger.warn(f"{pre} is not within the observation space.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:165: UserWarning: [33mWARN: The obs returned by the `step()` method is not within the observation space.[0m
+  logger.warn(f"{pre} is not within the observation space.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/spaces/box.py:227: UserWarning: [33mWARN: Casting input x to numpy array.[0m
+  logger.warn("Casting input x to numpy array.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:165: UserWarning: [33mWARN: The obs returned by the `step()` method is not within the observation space.[0m
+  logger.warn(f"{pre} is not within the observation space.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:165: UserWarning: [33mWARN: The obs returned by the `step()` method is not within the observation space.[0m
+  logger.warn(f"{pre} is not within the observation space.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:165: UserWarning: [33mWARN: The obs returned by the `step()` method is not within the observation space.[0m
+  logger.warn(f"{pre} is not within the observation space.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:165: UserWarning: [33mWARN: The obs returned by the `step()` method is not within the observation space.[0m
+  logger.warn(f"{pre} is not within the observation space.")
+130 64 507
+Training:   0%|          | 0/6000 [00:00<?, ?it/s]
+130 64 975
+Training:   0%|          | 0/6000 [00:00<?, ?it/s]
+  0%|          | 0/6000 [00:00<?, ?it/s]
+[Parallel(n_jobs=-1)]: Done   2 out of   8 | elapsed: 497.8min remaining: 1493.5min
+[Parallel(n_jobs=-1)]: Done   3 out of   8 | elapsed: 498.3min remaining: 830.4min
+[Parallel(n_jobs=-1)]: Done   4 out of   8 | elapsed: 499.2min remaining: 499.2min
+130 64 507
+Training:   0%|          | 0/6000 [00:00<?, ?it/s]
+130 64 975
+Training:   0%|          | 0/6000 [00:00<?, ?it/s]
+  0%|          | 0/6000 [00:00<?, ?it/s]
+[Parallel(n_jobs=-1)]: Done   5 out of   8 | elapsed: 499.6min remaining: 299.8min
+130 64 507
+Training:   0%|          | 0/6000 [00:00<?, ?it/s]
+130 64 975
+Training:   0%|          | 0/6000 [00:00<?, ?it/s]
+  0%|          | 0/6000 [00:00<?, ?it/s]
+[Parallel(n_jobs=-1)]: Done   6 out of   8 | elapsed: 499.8min remaining: 166.6min
+130 64 507
+Training:   0%|          | 0/6000 [00:00<?, ?it/s]
+130 64 975
+Training:   0%|          | 0/6000 [00:00<?, ?it/s]
+  0%|          | 0/6000 [00:00<?, ?it/s]
+130 64 507
+Training:   0%|          | 0/6000 [00:00<?, ?it/s]
+130 64 975
+Training:   0%|          | 0/6000 [00:00<?, ?it/s]
+  0%|          | 0/6000 [00:00<?, ?it/s]
+[Parallel(n_jobs=-1)]: Done   8 out of   8 | elapsed: 502.2min remaining:    0.0s
+[Parallel(n_jobs=-1)]: Done   8 out of   8 | elapsed: 502.2min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 8 concurrent workers.
+/scratch/project_2006609/Journal_[12_03_2024_30]/envs/mecsch_v1.py:125: ComplexWarning: Casting complex values to real discards the imaginary part
+  self.Channel_Matrix[n,m] = np.sqrt(np.power(10,-Path_loss/10)/2)*((np.random.randn(1) + 1.j*np.random.randn(1)).item())
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:141: UserWarning: [33mWARN: The obs returned by the `step()` method was expecting numpy array dtype to be float32, actual type: int8[0m
+  logger.warn(
+/scratch/project_2006609/Journal_[12_03_2024_30]/envs/mecsch_v1.py:125: ComplexWarning: Casting complex values to real discards the imaginary part
+  self.Channel_Matrix[n,m] = np.sqrt(np.power(10,-Path_loss/10)/2)*((np.random.randn(1) + 1.j*np.random.randn(1)).item())
+130 64 507
+Training:   0%|          | 0/6000 [00:00<?, ?it/s]
+130 64 975
+Training:   0%|          | 0/6000 [00:00<?, ?it/s]
+  0%|          | 0/6000 [00:00<?, ?it/s]
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:141: UserWarning: [33mWARN: The obs returned by the `step()` method was expecting numpy array dtype to be float32, actual type: int8[0m
+  logger.warn(
+/usr/local/lib/python3.9/site-packages/joblib/externals/loky/process_executor.py:702: UserWarning: A worker stopped while some jobs were given to the executor. This can be caused by a too short worker timeout or by a memory leak.
+  warnings.warn(
+/scratch/project_2006609/Journal_[12_03_2024_30]/envs/mecsch_v1.py:125: ComplexWarning: Casting complex values to real discards the imaginary part
+  self.Channel_Matrix[n,m] = np.sqrt(np.power(10,-Path_loss/10)/2)*((np.random.randn(1) + 1.j*np.random.randn(1)).item())
+/scratch/project_2006609/Journal_[12_03_2024_30]/envs/mecsch_v1.py:125: ComplexWarning: Casting complex values to real discards the imaginary part
+  self.Channel_Matrix[n,m] = np.sqrt(np.power(10,-Path_loss/10)/2)*((np.random.randn(1) + 1.j*np.random.randn(1)).item())
+/scratch/project_2006609/Journal_[12_03_2024_30]/envs/mecsch_v1.py:125: ComplexWarning: Casting complex values to real discards the imaginary part
+  self.Channel_Matrix[n,m] = np.sqrt(np.power(10,-Path_loss/10)/2)*((np.random.randn(1) + 1.j*np.random.randn(1)).item())
+/scratch/project_2006609/Journal_[12_03_2024_30]/envs/mecsch_v1.py:125: ComplexWarning: Casting complex values to real discards the imaginary part
+  self.Channel_Matrix[n,m] = np.sqrt(np.power(10,-Path_loss/10)/2)*((np.random.randn(1) + 1.j*np.random.randn(1)).item())
+/scratch/project_2006609/Journal_[12_03_2024_30]/envs/mecsch_v1.py:125: ComplexWarning: Casting complex values to real discards the imaginary part
+  self.Channel_Matrix[n,m] = np.sqrt(np.power(10,-Path_loss/10)/2)*((np.random.randn(1) + 1.j*np.random.randn(1)).item())
+/scratch/project_2006609/Journal_[12_03_2024_30]/envs/mecsch_v1.py:125: ComplexWarning: Casting complex values to real discards the imaginary part
+  self.Channel_Matrix[n,m] = np.sqrt(np.power(10,-Path_loss/10)/2)*((np.random.randn(1) + 1.j*np.random.randn(1)).item())
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:174: UserWarning: [33mWARN: Future gym versions will require that `Env.reset` can be passed a `seed` instead of using `Env.seed` for resetting the environment random number generator.[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:187: UserWarning: [33mWARN: Future gym versions will require that `Env.reset` can be passed `options` to allow the environment initialisation to be passed additional information.[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:174: UserWarning: [33mWARN: Future gym versions will require that `Env.reset` can be passed a `seed` instead of using `Env.seed` for resetting the environment random number generator.[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:187: UserWarning: [33mWARN: Future gym versions will require that `Env.reset` can be passed `options` to allow the environment initialisation to be passed additional information.[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:174: UserWarning: [33mWARN: Future gym versions will require that `Env.reset` can be passed a `seed` instead of using `Env.seed` for resetting the environment random number generator.[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:187: UserWarning: [33mWARN: Future gym versions will require that `Env.reset` can be passed `options` to allow the environment initialisation to be passed additional information.[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:195: UserWarning: [33mWARN: The result returned by `env.reset()` was not a tuple of the form `(obs, info)`, where `obs` is a observation and `info` is a dictionary containing additional information. Actual type: `<class 'list'>`[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:195: UserWarning: [33mWARN: The result returned by `env.reset()` was not a tuple of the form `(obs, info)`, where `obs` is a observation and `info` is a dictionary containing additional information. Actual type: `<class 'list'>`[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:195: UserWarning: [33mWARN: The result returned by `env.reset()` was not a tuple of the form `(obs, info)`, where `obs` is a observation and `info` is a dictionary containing additional information. Actual type: `<class 'list'>`[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:219: DeprecationWarning: [33mWARN: Core environment is written in old step API which returns one bool instead of two. It is recommended to rewrite the environment with new step API. [0m
+  logger.deprecation(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:226: UserWarning: [33mWARN: Expects `done` signal to be a boolean, actual type: <class 'list'>[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:149: UserWarning: [33mWARN: The obs returned by the `step()` method was expecting a tuple, actual type: <class 'list'>[0m
+  logger.warn(f"{pre} was expecting a tuple, actual type: {type(obs)}")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:141: UserWarning: [33mWARN: The obs returned by the `step()` method was expecting numpy array dtype to be float32, actual type: int8[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:219: DeprecationWarning: [33mWARN: Core environment is written in old step API which returns one bool instead of two. It is recommended to rewrite the environment with new step API. [0m
+  logger.deprecation(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:226: UserWarning: [33mWARN: Expects `done` signal to be a boolean, actual type: <class 'list'>[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:149: UserWarning: [33mWARN: The obs returned by the `step()` method was expecting a tuple, actual type: <class 'list'>[0m
+  logger.warn(f"{pre} was expecting a tuple, actual type: {type(obs)}")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:141: UserWarning: [33mWARN: The obs returned by the `step()` method was expecting numpy array dtype to be float32, actual type: int8[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:252: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:252: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:219: DeprecationWarning: [33mWARN: Core environment is written in old step API which returns one bool instead of two. It is recommended to rewrite the environment with new step API. [0m
+  logger.deprecation(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:226: UserWarning: [33mWARN: Expects `done` signal to be a boolean, actual type: <class 'list'>[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:149: UserWarning: [33mWARN: The obs returned by the `step()` method was expecting a tuple, actual type: <class 'list'>[0m
+  logger.warn(f"{pre} was expecting a tuple, actual type: {type(obs)}")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:141: UserWarning: [33mWARN: The obs returned by the `step()` method was expecting numpy array dtype to be float32, actual type: int8[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:252: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:174: UserWarning: [33mWARN: Future gym versions will require that `Env.reset` can be passed a `seed` instead of using `Env.seed` for resetting the environment random number generator.[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:187: UserWarning: [33mWARN: Future gym versions will require that `Env.reset` can be passed `options` to allow the environment initialisation to be passed additional information.[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:195: UserWarning: [33mWARN: The result returned by `env.reset()` was not a tuple of the form `(obs, info)`, where `obs` is a observation and `info` is a dictionary containing additional information. Actual type: `<class 'list'>`[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:219: DeprecationWarning: [33mWARN: Core environment is written in old step API which returns one bool instead of two. It is recommended to rewrite the environment with new step API. [0m
+  logger.deprecation(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:226: UserWarning: [33mWARN: Expects `done` signal to be a boolean, actual type: <class 'list'>[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:149: UserWarning: [33mWARN: The obs returned by the `step()` method was expecting a tuple, actual type: <class 'list'>[0m
+  logger.warn(f"{pre} was expecting a tuple, actual type: {type(obs)}")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:141: UserWarning: [33mWARN: The obs returned by the `step()` method was expecting numpy array dtype to be float32, actual type: int8[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:252: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:174: UserWarning: [33mWARN: Future gym versions will require that `Env.reset` can be passed a `seed` instead of using `Env.seed` for resetting the environment random number generator.[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:187: UserWarning: [33mWARN: Future gym versions will require that `Env.reset` can be passed `options` to allow the environment initialisation to be passed additional information.[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:195: UserWarning: [33mWARN: The result returned by `env.reset()` was not a tuple of the form `(obs, info)`, where `obs` is a observation and `info` is a dictionary containing additional information. Actual type: `<class 'list'>`[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:219: DeprecationWarning: [33mWARN: Core environment is written in old step API which returns one bool instead of two. It is recommended to rewrite the environment with new step API. [0m
+  logger.deprecation(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:226: UserWarning: [33mWARN: Expects `done` signal to be a boolean, actual type: <class 'list'>[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:149: UserWarning: [33mWARN: The obs returned by the `step()` method was expecting a tuple, actual type: <class 'list'>[0m
+  logger.warn(f"{pre} was expecting a tuple, actual type: {type(obs)}")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:141: UserWarning: [33mWARN: The obs returned by the `step()` method was expecting numpy array dtype to be float32, actual type: int8[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:252: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:174: UserWarning: [33mWARN: Future gym versions will require that `Env.reset` can be passed a `seed` instead of using `Env.seed` for resetting the environment random number generator.[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:187: UserWarning: [33mWARN: Future gym versions will require that `Env.reset` can be passed `options` to allow the environment initialisation to be passed additional information.[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:195: UserWarning: [33mWARN: The result returned by `env.reset()` was not a tuple of the form `(obs, info)`, where `obs` is a observation and `info` is a dictionary containing additional information. Actual type: `<class 'list'>`[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:219: DeprecationWarning: [33mWARN: Core environment is written in old step API which returns one bool instead of two. It is recommended to rewrite the environment with new step API. [0m
+  logger.deprecation(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:226: UserWarning: [33mWARN: Expects `done` signal to be a boolean, actual type: <class 'list'>[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:149: UserWarning: [33mWARN: The obs returned by the `step()` method was expecting a tuple, actual type: <class 'list'>[0m
+  logger.warn(f"{pre} was expecting a tuple, actual type: {type(obs)}")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:141: UserWarning: [33mWARN: The obs returned by the `step()` method was expecting numpy array dtype to be float32, actual type: int8[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:252: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+[Parallel(n_jobs=-1)]: Done   2 out of   8 | elapsed:  9.3min remaining: 27.9min
+[Parallel(n_jobs=-1)]: Done   3 out of   8 | elapsed:  9.3min remaining: 15.5min
+130 64 507
+Training:   0%|          | 0/6000 [00:00<?, ?it/s]
+130 64 975
+Training:   0%|          | 0/6000 [00:00<?, ?it/s]
+  0%|          | 0/6000 [00:00<?, ?it/s]
+  0%|          | 0/6000 [00:00<?, ?it/s]
+[Parallel(n_jobs=-1)]: Done   4 out of   8 | elapsed:  9.3min remaining:  9.3min
+[Parallel(n_jobs=-1)]: Done   5 out of   8 | elapsed:  9.4min remaining:  5.6min
+[Parallel(n_jobs=-1)]: Done   6 out of   8 | elapsed:  9.4min remaining:  3.1min
+[Parallel(n_jobs=-1)]: Done   8 out of   8 | elapsed:  9.4min remaining:    0.0s
+[Parallel(n_jobs=-1)]: Done   8 out of   8 | elapsed:  9.4min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 8 concurrent workers.
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v1 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v1 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v1 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v1 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v2 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v2 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v2 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v3 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v3 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v3 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v2 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v4 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v4 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v4 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v3 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v5 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v5 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v5 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v4 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v6 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v6 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v6 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v5 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v6 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/scratch/project_2006609/Journal_[12_03_2024_30]/envs/mecsch_v1.py:125: ComplexWarning: Casting complex values to real discards the imaginary part
+  self.Channel_Matrix[n,m] = np.sqrt(np.power(10,-Path_loss/10)/2)*((np.random.randn(1) + 1.j*np.random.randn(1)).item())
+/scratch/project_2006609/Journal_[12_03_2024_30]/envs/mecsch_v1.py:125: ComplexWarning: Casting complex values to real discards the imaginary part
+  self.Channel_Matrix[n,m] = np.sqrt(np.power(10,-Path_loss/10)/2)*((np.random.randn(1) + 1.j*np.random.randn(1)).item())
+/scratch/project_2006609/Journal_[12_03_2024_30]/envs/mecsch_v1.py:125: ComplexWarning: Casting complex values to real discards the imaginary part
+  self.Channel_Matrix[n,m] = np.sqrt(np.power(10,-Path_loss/10)/2)*((np.random.randn(1) + 1.j*np.random.randn(1)).item())
+/scratch/project_2006609/Journal_[12_03_2024_30]/envs/mecsch_v1.py:125: ComplexWarning: Casting complex values to real discards the imaginary part
+  self.Channel_Matrix[n,m] = np.sqrt(np.power(10,-Path_loss/10)/2)*((np.random.randn(1) + 1.j*np.random.randn(1)).item())
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v1 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v2 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v3 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v4 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v5 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v6 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/scratch/project_2006609/Journal_[12_03_2024_30]/envs/mecsch_v1.py:125: ComplexWarning: Casting complex values to real discards the imaginary part
+  self.Channel_Matrix[n,m] = np.sqrt(np.power(10,-Path_loss/10)/2)*((np.random.randn(1) + 1.j*np.random.randn(1)).item())
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v1 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v2 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v3 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v4 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v5 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v6 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/scratch/project_2006609/Journal_[12_03_2024_30]/envs/mecsch_v1.py:125: ComplexWarning: Casting complex values to real discards the imaginary part
+  self.Channel_Matrix[n,m] = np.sqrt(np.power(10,-Path_loss/10)/2)*((np.random.randn(1) + 1.j*np.random.randn(1)).item())
+/scratch/project_2006609/Journal_[12_03_2024_30]/envs/mecsch_v1.py:125: ComplexWarning: Casting complex values to real discards the imaginary part
+  self.Channel_Matrix[n,m] = np.sqrt(np.power(10,-Path_loss/10)/2)*((np.random.randn(1) + 1.j*np.random.randn(1)).item())
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:174: UserWarning: [33mWARN: Future gym versions will require that `Env.reset` can be passed a `seed` instead of using `Env.seed` for resetting the environment random number generator.[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:187: UserWarning: [33mWARN: Future gym versions will require that `Env.reset` can be passed `options` to allow the environment initialisation to be passed additional information.[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:195: UserWarning: [33mWARN: The result returned by `env.reset()` was not a tuple of the form `(obs, info)`, where `obs` is a observation and `info` is a dictionary containing additional information. Actual type: `<class 'list'>`[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:219: DeprecationWarning: [33mWARN: Core environment is written in old step API which returns one bool instead of two. It is recommended to rewrite the environment with new step API. [0m
+  logger.deprecation(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:226: UserWarning: [33mWARN: Expects `done` signal to be a boolean, actual type: <class 'list'>[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:149: UserWarning: [33mWARN: The obs returned by the `step()` method was expecting a tuple, actual type: <class 'list'>[0m
+  logger.warn(f"{pre} was expecting a tuple, actual type: {type(obs)}")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:141: UserWarning: [33mWARN: The obs returned by the `step()` method was expecting numpy array dtype to be float32, actual type: int8[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:252: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+[Parallel(n_jobs=-1)]: Done   2 out of   8 | elapsed:  6.6min remaining: 19.7min
+[Parallel(n_jobs=-1)]: Done   3 out of   8 | elapsed:  6.6min remaining: 11.0min
+[Parallel(n_jobs=-1)]: Done   4 out of   8 | elapsed:  6.6min remaining:  6.6min
+[Parallel(n_jobs=-1)]: Done   5 out of   8 | elapsed:  6.6min remaining:  3.9min
+[Parallel(n_jobs=-1)]: Done   6 out of   8 | elapsed:  6.6min remaining:  2.2min
+[Parallel(n_jobs=-1)]: Done   8 out of   8 | elapsed:  6.6min remaining:    0.0s
+[Parallel(n_jobs=-1)]: Done   8 out of   8 | elapsed:  6.6min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 8 concurrent workers.
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:555: UserWarning: [33mWARN: The environment MECSCH-v4 is out of date. You should consider upgrading to version `v6`.[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:555: UserWarning: [33mWARN: The environment MECSCH-v4 is out of date. You should consider upgrading to version `v6`.[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:555: UserWarning: [33mWARN: The environment MECSCH-v4 is out of date. You should consider upgrading to version `v6`.[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:555: UserWarning: [33mWARN: The environment MECSCH-v4 is out of date. You should consider upgrading to version `v6`.[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:555: UserWarning: [33mWARN: The environment MECSCH-v4 is out of date. You should consider upgrading to version `v6`.[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:555: UserWarning: [33mWARN: The environment MECSCH-v4 is out of date. You should consider upgrading to version `v6`.[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:555: UserWarning: [33mWARN: The environment MECSCH-v4 is out of date. You should consider upgrading to version `v6`.[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v1 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v2 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v3 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v4 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v5 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:498: UserWarning: [33mWARN: Overriding environment MECSCH-v6 already in registry.[0m
+  logger.warn(f"Overriding environment {new_spec.id} already in registry.")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:555: UserWarning: [33mWARN: The environment MECSCH-v4 is out of date. You should consider upgrading to version `v6`.[0m
+  logger.warn(
+[Parallel(n_jobs=-1)]: Done   2 out of   8 | elapsed:  2.2min remaining:  6.5min
+[Parallel(n_jobs=-1)]: Done   3 out of   8 | elapsed:  2.2min remaining:  3.6min
+[Parallel(n_jobs=-1)]: Done   4 out of   8 | elapsed:  2.2min remaining:  2.2min
+[Parallel(n_jobs=-1)]: Done   5 out of   8 | elapsed:  2.2min remaining:  1.3min
+[Parallel(n_jobs=-1)]: Done   6 out of   8 | elapsed:  2.2min remaining:   43.4s
+[Parallel(n_jobs=-1)]: Done   8 out of   8 | elapsed:  2.2min remaining:    0.0s
+[Parallel(n_jobs=-1)]: Done   8 out of   8 | elapsed:  2.2min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 8 concurrent workers.
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:555: UserWarning: [33mWARN: The environment MECSCH-v3 is out of date. You should consider upgrading to version `v6`.[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:555: UserWarning: [33mWARN: The environment MECSCH-v3 is out of date. You should consider upgrading to version `v6`.[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:555: UserWarning: [33mWARN: The environment MECSCH-v3 is out of date. You should consider upgrading to version `v6`.[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:555: UserWarning: [33mWARN: The environment MECSCH-v3 is out of date. You should consider upgrading to version `v6`.[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:555: UserWarning: [33mWARN: The environment MECSCH-v3 is out of date. You should consider upgrading to version `v6`.[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:555: UserWarning: [33mWARN: The environment MECSCH-v3 is out of date. You should consider upgrading to version `v6`.[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:555: UserWarning: [33mWARN: The environment MECSCH-v3 is out of date. You should consider upgrading to version `v6`.[0m
+  logger.warn(
+130 64 507
+Training:   0%|          | 0/6000 [00:00<?, ?it/s]
+130 64 975
+Training:   0%|          | 0/6000 [00:00<?, ?it/s]
+  0%|          | 0/6000 [00:00<?, ?it/s]
+  0%|          | 0/6000 [00:00<?, ?it/s]
+  0%|          | 0/6000 [00:00<?, ?it/s]
+  0%|          | 0/6000 [00:00<?, ?it/s]
+/users/smostafa/.local/lib/python3.9/site-packages/gym/envs/registration.py:555: UserWarning: [33mWARN: The environment MECSCH-v3 is out of date. You should consider upgrading to version `v6`.[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:174: UserWarning: [33mWARN: Future gym versions will require that `Env.reset` can be passed a `seed` instead of using `Env.seed` for resetting the environment random number generator.[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:187: UserWarning: [33mWARN: Future gym versions will require that `Env.reset` can be passed `options` to allow the environment initialisation to be passed additional information.[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:195: UserWarning: [33mWARN: The result returned by `env.reset()` was not a tuple of the form `(obs, info)`, where `obs` is a observation and `info` is a dictionary containing additional information. Actual type: `<class 'list'>`[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:219: DeprecationWarning: [33mWARN: Core environment is written in old step API which returns one bool instead of two. It is recommended to rewrite the environment with new step API. [0m
+  logger.deprecation(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:226: UserWarning: [33mWARN: Expects `done` signal to be a boolean, actual type: <class 'list'>[0m
+  logger.warn(
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:149: UserWarning: [33mWARN: The obs returned by the `step()` method was expecting a tuple, actual type: <class 'list'>[0m
+  logger.warn(f"{pre} was expecting a tuple, actual type: {type(obs)}")
+/users/smostafa/.local/lib/python3.9/site-packages/gym/utils/passive_env_checker.py:252: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+[Parallel(n_jobs=-1)]: Done   2 out of   8 | elapsed:  1.7min remaining:  5.1min
+[Parallel(n_jobs=-1)]: Done   3 out of   8 | elapsed:  1.7min remaining:  2.9min
+[Parallel(n_jobs=-1)]: Done   4 out of   8 | elapsed:  1.7min remaining:  1.7min
+[Parallel(n_jobs=-1)]: Done   5 out of   8 | elapsed:  1.7min remaining:  1.0min
+[Parallel(n_jobs=-1)]: Done   6 out of   8 | elapsed:  1.7min remaining:   34.4s
+[Parallel(n_jobs=-1)]: Done   8 out of   8 | elapsed:  1.7min remaining:    0.0s
+[Parallel(n_jobs=-1)]: Done   8 out of   8 | elapsed:  1.7min finished
+  0%|          | 0/6000 [00:00<?, ?it/s]
+  0%|          | 0/6000 [00:00<?, ?it/s]
+  0%|          | 0/6000 [00:00<?, ?it/s]
+  0%|          | 0/6000 [00:00<?, ?it/s]
+  0%|          | 0/6000 [00:00<?, ?it/s]
+  0%|          | 0/6000 [00:00<?, ?it/s]
+  0%|          | 0/6000 [00:00<?, ?it/s]
+  0%|          | 0/6000 [00:00<?, ?it/s]
+  0%|          | 0/6000 [00:00<?, ?it/s]
+  0%|          | 0/6000 [00:00<?, ?it/s]
+  0%|          | 0/6000 [00:00<?, ?it/s]
+  0%|          | 0/6000 [00:00<?, ?it/s]
+  0%|          | 0/6000 [00:00<?, ?it/s]
+  0%|          | 0/6000 [00:00<?, ?it/s]
+  0%|          | 0/6000 [00:00<?, ?it/s]
+  0%|          | 0/6000 [00:00<?, ?it/s]
+  0%|          | 0/6000 [00:00<?, ?it/s]
+  0%|          | 0/6000 [00:00<?, ?it/s]
+  0%|          | 0/6000 [00:00<?, ?it/s]
+  0%|          | 0/6000 [00:00<?, ?it/s]
+  0%|          | 0/6000 [00:00<?, ?it/s]
+  0%|          | 0/6000 [00:00<?, ?it/s]
+  0%|          | 0/6000 [00:00<?, ?it/s]
+  0%|          | 0/6000 [00:00<?, ?it/s]
+  0%|          | 0/6000 [00:00<?, ?it/s]
+  0%|          | 0/6000 [00:00<?, ?it/s]
+  0%|          | 0/6000 [00:00<?, ?it/s]
+  0%|          | 0/6000 [00:00<?, ?it/s]
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+Execution time: 42912.34713315964 seconds
