@@ -20,4 +20,4 @@ pip3 install tqdm
 pip3 install tensorboard 
 pip3 install SciencePlots
 
-python3 MAPPO_Run_Train_Test_2Seeds.py
+python3 MAPPO_Run_Train_Test_8Seeds.py
