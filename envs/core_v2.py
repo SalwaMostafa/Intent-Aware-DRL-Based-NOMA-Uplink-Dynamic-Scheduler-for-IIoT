@@ -278,15 +278,6 @@ class BS(Entity):
             state = np.concatenate((np.array(self.obs_buffer,dtype=np.int8).flatten(),
                                     np.array(self.ch_max_buffer, dtype=np.float32).flatten(),
                                     np.array(self.deadline_buffer, dtype=np.float16).flatten()))
-                                    #np.array(self.channel_buffer, dtype=np.int8).flatten(),
-                                    #np.array(self.ac_buffer,dtype=np.int8).flatten()))
-                                    # np.array(self.succ_buffer, dtype=np.int8).flatten(),
-                                    # np.array(self.channel_buffer, dtype=np.int8).flatten()))
-                                    # np.array(self.QoS_buffer, dtype=np.int8).flatten()
-                                    # np.array(self.rx_buffer, dtype=np.int8).flatten(),                                
-                                    # np.array(self.tx_buffer, dtype=np.int8).flatten(),
-                                    # np.array(self.QFI_buffer, dtype=np.int8).flatten()
-                                    # np.array(self.power_buffer, dtype=np.int8).flatten()
                                     
         if self.counter:
             state = np.concatenate((state, np.array([self.iteration])))
