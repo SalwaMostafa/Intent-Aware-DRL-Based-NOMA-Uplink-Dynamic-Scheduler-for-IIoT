@@ -1,6 +1,5 @@
 # The objective function is to achieve an URLLC to the IIoT MDs. 
 # The selected channels state history is added to each user state space as one-hot encoding.
-# The first task parameters in the queue is added to each user state space. (excluded for now)
 # The users that successfully computed their computation tasks is added to the BS state space.
 
 from collections import deque
