@@ -1,5 +1,4 @@
 # In this core version: I added the selected channel state to each user state space as one-hot encoding.
-#                     : I added the first task parameters in the queue to each user state space. (excluded for now.)
 
 from collections import deque
 from envs.utils import to_categorical  
