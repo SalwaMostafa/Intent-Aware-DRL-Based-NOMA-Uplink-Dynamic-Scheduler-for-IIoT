@@ -738,8 +738,6 @@ def run_sim_on(env_id="MECSCH-v0",n_episodes=1000,max_ep_len=30,parameter_sharin
             #       previous_best_ST = np.mean(eval_success_tasks)
             #    print("previous_best_ST",previous_best_ST)
                  
-    #feval_reward,feval_success_tasks,feval_channel_success,feval_channel_collision,feval_channel_idle,feval_goodput,feval_droprate,feval_failed = test_agents(best_agents, env_id, n_episodes=n_feval_episodes, max_ep_len=max_ep_len)
-    #print("feval_success_tasks",feval_success_tasks)
     return train_rewards,train_success_tasks,train_channel_success,train_channel_collision,train_channel_idle,train_goodput,train_droprate,train_failed,\
            eval_rewards,eval_success_tasks,eval_channel_success,eval_channel_collision,eval_channel_idle,eval_goodput,eval_droprate,eval_failed,train_actor_loss,train_critic_loss,train_value
 
