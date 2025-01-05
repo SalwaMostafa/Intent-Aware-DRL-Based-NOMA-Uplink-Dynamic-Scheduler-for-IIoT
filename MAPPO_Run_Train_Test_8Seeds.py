@@ -721,23 +721,6 @@ def run_sim_on(env_id="MECSCH-v0",n_episodes=1000,max_ep_len=30,parameter_sharin
                     eval_droprate.append(ep_droprate)
                     eval_failed.append(ep_failed/ep_len)
                     
-            #if ep % eval_every == 0:                
-            #    eval_reward,eval_success_tasks,eval_channel_success,eval_channel_collision,eval_channel_idle,eval_goodput,eval_droprate,eval_failed = test_agents(best_agents, env_id, n_episodes=n_eval_episodes, max_ep_len=max_ep_len)
-            #    ep_point.append(ep)
-            #    evals_rewards.append(np.mean(eval_reward))
-            #    evals_success_tasks.append(np.mean(eval_success_tasks))
-            #    evals_channel_success.append(np.mean(eval_channel_success))
-            #    evals_channel_collision.append(np.mean(eval_channel_collision))
-            #    evals_channel_idle.append(np.mean(eval_channel_idle))
-            #    evals_goodput.append(np.mean(eval_goodput))
-            #    evals_droprate.append(np.mean(eval_droprate))
-            #    evals_failed.append(np.mean(eval_failed))
-            #    if np.mean(eval_success_tasks) > previous_best_ST:
-            #       del best_agents
-            #       best_agents = deepcopy(agents)
-            #       previous_best_ST = np.mean(eval_success_tasks)
-            #    print("previous_best_ST",previous_best_ST)
-                 
     return train_rewards,train_success_tasks,train_channel_success,train_channel_collision,train_channel_idle,train_goodput,train_droprate,train_failed,\
            eval_rewards,eval_success_tasks,eval_channel_success,eval_channel_collision,eval_channel_idle,eval_goodput,eval_droprate,eval_failed,train_actor_loss,train_critic_loss,train_value
 
